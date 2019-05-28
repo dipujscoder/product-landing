@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  background-color: lightgray;
+  font-family: 'Roboto', sans-serif;
+}
+#main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+//Header
+#header {
+  text-align: center;
+}
+
+// Form Servey
+#survey-form {
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+//Servey form
+.form-group-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+// Main Lable
+.main-label {  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// Form Control & Slection Option
+.form-control,
+.select-option {
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #fff;
+  border: 1px solid #ededed;
+}
+
+
+//Button Container
+.button-container {
+  margin-top: 20px;
+  .submit-button {
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+    border: 1px solid #ededed;
+    cursor: pointer;
+    &:hover {
+      background-color: #003100;
+      color: #fff;
+    }
+  }
+}
