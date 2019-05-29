@@ -1,64 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-  background-color: lightgray;
   font-family: 'Roboto', sans-serif;
 }
-#main {
-  max-width: 960px;
-  margin: 0 auto;
+
+:root {
+  --white-color: #fff;
+  --gray-color: #edeeed;
+  --primary-color: #31d19e;
+}
+/* Container */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-//Header
+@media (min-width: 1200px){
+  .container {
+    width: 1100px;
+  }
+}
+
+/* Header */ 
 #header {
-  text-align: center;
+  background-color: var(--gray-color);
 }
 
-// Form Servey
-#survey-form {
-  background-color: whitesmoke;
-  padding: 30px;
-  border-radius: 5px;
+#header-img  {
+  max-width: 150px;
+  max-height: 50px;
 }
 
-//Servey form
-.form-group-row {
+.header-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px;
 }
 
-// Main Lable
-.main-label {  
-  padding-top: 10px;
-  padding-bottom: 10px;
+@media (min-width: 480px) {
+  .header-content {
+    flex-direction: row;
+  }
 }
-
-// Form Control & Slection Option
-.form-control,
-.select-option {
-  height: 40px;
-  border-radius: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #fff;
-  border: 1px solid #ededed;
-}
-
-
-//Button Container
-.button-container {
-  margin-top: 20px;
-  .submit-button {
-    border-radius: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 40px;
-    border: 1px solid #ededed;
-    cursor: pointer;
-    &:hover {
-      background-color: #003100;
-      color: #fff;
+/* Nav bar */ 
+#nav-bar {
+  margin-left: auto;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    li {
+      a {
+        color: #222;
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        &:hover {
+         text-decoration: underline;
+         color: var(--primary-color);
+        }
+      }
     }
   }
 }
