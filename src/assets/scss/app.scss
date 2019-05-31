@@ -8,6 +8,7 @@ body {
   --white-color: #fff;
   --gray-color: #edeeed;
   --primary-color: #31d19e;
+  --border-color: #e5e5e5;
 }
 /* Container */
 .container {
@@ -71,3 +72,55 @@ body {
     }
   }
 }
+
+/* Getting Started */
+.getting-started-section {
+  padding-top: 70px;
+  padding-bottom: 70px;  
+}
+
+.getting-started-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-transform: capitalize;
+  }
+}
+#form {
+  input {
+    padding: 8px 20px;
+  } 
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+/* Featured Section */
+.featured-content {
+  display: flex;
+  .single-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center; 
+  }
+  .icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: 1px solid var(--border-color);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%;
+    i {
+      font-size: 25px;
+    }
+  }
+}
+
+/**/
