@@ -13,6 +13,10 @@ body {
   color: #848484
 }
 
+.bg-light {
+  background-color: var(--gray-color);
+}
+
 h2, h2, h3, h4, h5, h6 {
   color: var(--dark-color);
 }
@@ -22,15 +26,18 @@ h2, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
-@media (min-width: 1200px){
-  .container {
-    width: 1100px;
+  @media (min-width: 768px){
+    width: 750px;
+  }
+  @media (min-width: 992px){
+    width: 970px;
+  }
+  @media (min-width: 1200px){
+    width: 1170px;
   }
 }
+
 
 /* Header */
 #header {
@@ -45,16 +52,14 @@ h2, h2, h3, h4, h5, h6 {
 .header-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   padding: 15px;
-}
-
-@media (min-width: 480px) {
-  .header-content {
+  @media (min-width: 480px) {
     flex-direction: row;
   }
 }
+
 /* Nav bar */
 #nav-bar {
   margin-left: auto;
@@ -64,7 +69,7 @@ h2, h2, h3, h4, h5, h6 {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     li {
       a {
         color: var(--dark-color);
@@ -80,25 +85,10 @@ h2, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Getting Started */
-.getting-started-section {
+/* Section Padding */
+.section-padding {
   padding-top: 70px;
   padding-bottom: 70px;
-}
-
-.getting-started-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    text-transform: capitalize;
-  }
-}
-#form {
-  input {
-    padding: 8px 20px;
-  }
 }
 
 /* Section Title */
@@ -108,65 +98,110 @@ h2, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
 }
 
+.getting-started-content {
+  h2 {
+    text-transform: capitalize;
+    text-align: center;
+  }
+}
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  input {
+    padding: 8px 20px;
+    border: 1px solid var(--border-color);
+  }
+}
+
 /* Featured Section */
 .featured-content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   @media (min-width: 768px) {
     flex-direction: row;
   }
   .single-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
-    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @media (min-width: 768px) {
-      width: 33%;
+      width: 30%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
   .icon {
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
+    width: 60px;
+    height: 60px;    
     border: 1px solid var(--border-color);
     margin: 0 auto;
     text-align: center;
     border-radius: 50%;
     i {
       font-size: 25px;
+      line-height: 60px;
+    }
+    &:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      i {
+        color: var(--white-color);
+      }
     }
   }
 }
 
-/* Pricing Content */
-.pricing-content {
-  display: flex;
-  flex-direction: row;
-  padding-top: 70px;
-  padding-bottom: 70px;
 
-}
 
 /* Video */
 #video {
   width: 100%;
   height: 210px;
+  display: block;
   @media (min-width: 768px) {
     height: 310px;
-  }
-  @media (min-width: 992px) {
     width: 450px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+}
+
+/* Pricing Content */
+.pricing-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 }
 
 /* Card  */
 .card {
   text-align: center;
-  width: 33%;
   border: 1px solid var(--border-color);
+  margin-bottom: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+  @media (min-width: 768px) {
+    width: 30%;
+    margin: 0;
+    &:not(:first-child):not(:last-child) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
   .card-title {
     text-transform: capitalize;
   }
@@ -183,19 +218,22 @@ h2, h2, h3, h4, h5, h6 {
       padding: 15px 10px;
     }
   }
-  &:not(:first-child):not(:last-child) {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
+  
 }
 
 
 /* Footer */
 .footer {
-  background-color: var(--gray-color);
+  // background-color: var(--gray-color);
   p {
+    margin: 0;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
+
+.dipu {
+  background-color: red;
+}
+
